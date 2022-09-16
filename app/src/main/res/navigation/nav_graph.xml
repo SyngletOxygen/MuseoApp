@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuPrincipalFragment">
+
+    <fragment
+        android:id="@+id/menuPrincipalFragment"
+        android:name="com.eestn5.museoapp.MenuPrincipalFragment"
+        android:label="@string/MenuPrincipalFragment" >
+        <action
+            android:id="@+id/action_menuPrincipalFragment_to_seleccionDeDiscapacidadActivity"
+            app:destination="@id/seleccionDeDiscapacidadActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/seleccionDeDiscapacidadActivity"
+        android:name="com.eestn5.museoapp.SeleccionDeDiscapacidadActivity"
+        android:label="@string/SeleccionDeDiscapacidad" />
+</navigation>

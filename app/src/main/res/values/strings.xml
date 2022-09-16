@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MuseoApp</string>
+    <string name="MenuPrincipalFragment">Menu Principal</string>
+    <string name="SeleccionDeDiscapacidad">Seleccion de Discapacidad</string>
 </resources>
