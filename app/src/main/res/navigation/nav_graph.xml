@@ -11,9 +11,20 @@
         <action
             android:id="@+id/action_menuPrincipalFragment_to_seleccionDeDiscapacidadActivity"
             app:destination="@id/seleccionDeDiscapacidadActivity" />
+        <action
+            android:id="@+id/action_menuPrincipalFragment_to_layoutPuntoFragment"
+            app:destination="@id/layoutPuntoFragment" />
     </fragment>
     <fragment
         android:id="@+id/seleccionDeDiscapacidadActivity"
         android:name="com.eestn5.museoapp.SeleccionDeDiscapacidadActivity"
         android:label="@string/SeleccionDeDiscapacidad" />
+    <fragment
+        android:id="@+id/layoutPuntoFragment"
+        android:name="com.eestn5.museoapp.LayoutPuntoFragment"
+        android:label="LayoutPuntoFragment" >
+        <action
+            android:id="@+id/action_layoutPuntoFragment_to_menuPrincipalFragment"
+            app:destination="@id/menuPrincipalFragment" />
+    </fragment>
 </navigation>
