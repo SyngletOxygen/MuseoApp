@@ -22,8 +22,8 @@ public class LogicSQLLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE SCORE (_id INTEGER PRIMARY KEY AUTOINCREMENT, puntaje INT, fecha INT);");
-        db.execSQL("CREATE TABLE CONFIG (_id INTEGER PRIMARY KEY AUTOINCREMENT, puntaje INT, fecha INT);");
+        db.execSQL("CREATE TABLE SCORE (_id INTEGER PRIMARY KEY AUTOINCREMENT, puntaje INT, fecha STRING,nombre_juego STRING);");
+        db.execSQL("CREATE TABLE CONFIG (_id INTEGER PRIMARY KEY AUTOINCREMENT, config INT);");
     }
 
     public void AddSCORE(Puntaje p) {
@@ -32,6 +32,7 @@ public class LogicSQLLiteHelper extends SQLiteOpenHelper {
             ContentValues valores = new ContentValues();
             valores.put("puntaje", p.Puntaje);
             valores.put("fecha", p.fecha_de_creacion);
+            valores.put("nombre_juego", p.fecha_de_creacion);
             db.insert("score", null, valores);
             db.close();
         }
@@ -40,12 +41,12 @@ public class LogicSQLLiteHelper extends SQLiteOpenHelper {
     public List<Puntaje> getSCORE() {
         SQLiteDatabase db = getReadableDatabase();
         List<Puntaje> lista_de_puntajes = new ArrayList<Puntaje>();
-        String[] valores_recuperar = { "puntaje", "fecha"};
+        String[] valores_recuperar = { "puntaje", "fecha","nombre_juego"};
         Cursor c = db.query("score", valores_recuperar,
                 null, null, null, null, "puntaje DESC", String.valueOf(25));
         c.moveToFirst();
         do {
-            Puntaje puntaje = new Puntaje(c.getInt(0), c.getInt(1));
+            Puntaje puntaje = new Puntaje(c.getInt(0), c.getInt(1),c.getString(2));
             lista_de_puntajes.add(puntaje);
         } while (c.moveToNext());
         db.close();
