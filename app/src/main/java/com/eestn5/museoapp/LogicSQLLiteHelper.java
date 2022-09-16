@@ -13,16 +13,17 @@ import java.util.List;
 
 public class LogicSQLLiteHelper extends SQLiteOpenHelper {
     private static final String NOMBRE_BASE_DE_DATOS = "User";
-    private String[] NOMBRE_TABLA = {"SCORE","CONFIG"};
+
     private static final int VERSION_BASE_DE_DATOS = 1;
-    private String TABLA_CONTACTOS = "CREATE TABLE "+NOMBRE_TABLA[0]+" (_id INTEGER PRIMARY KEY AUTOINCREMENT, puntaje INT, fecha INT);";
+
     public LogicSQLLiteHelper(@Nullable Context context) {
         super(context, NOMBRE_BASE_DE_DATOS, null, VERSION_BASE_DE_DATOS);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(TABLA_CONTACTOS);
+        db.execSQL("CREATE TABLE SCORE (_id INTEGER PRIMARY KEY AUTOINCREMENT, puntaje INT, fecha INT);");
+        db.execSQL("CREATE TABLE CONFIG (_id INTEGER PRIMARY KEY AUTOINCREMENT, puntaje INT, fecha INT);");
     }
 
     public void AddSCORE(Puntaje p) {
