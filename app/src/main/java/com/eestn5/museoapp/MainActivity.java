@@ -5,6 +5,9 @@ package com.eestn5.museoapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -17,14 +20,32 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-
+    EditText textOpinion,textComentario;
+    Button enviar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        try {
-            
+        setContentView(R.layout.activity_main);
 
+        textOpinion = findViewById(R.id.editTextOpinion);
+
+        textComentario =  findViewById(R.id.editTextOpinion);
+
+        enviar = findViewById(R.id.enviar);
+
+
+        try {
+            enviar.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+
+                    new ComentariosHandler().enviarDatos(textOpinion,textComentario);
+
+                }
+
+            });
             binding = ActivityMainBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
 
