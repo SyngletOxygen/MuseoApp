@@ -1,4 +1,4 @@
-package com.eestn5.museoapp;
+package com.eestn5.museoapp.modelos;
 
 public class Puntaje {
 

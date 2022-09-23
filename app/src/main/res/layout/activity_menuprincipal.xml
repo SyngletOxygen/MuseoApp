@@ -5,28 +5,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mauro"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent">
+
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
+
         android:layout_width="409dp"
         android:layout_height="247dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894">
+        app:layout_constraintVertical_bias="0.82">
 
         <Button
             android:id="@+id/BotonPaseo"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="25dp"
-            android:backgroundTint="#888888"
+            android:backgroundTint="@color/button"
             android:drawableTop="@android:drawable/ic_dialog_map"
             android:text="Iniciar Paseo" />
 
@@ -38,9 +41,9 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/button"
             android:drawableTop="@android:drawable/ic_menu_send"
-            android:text="Juegos"
-            android:backgroundTint="#FF1100"/>
+            android:text="Juegos" />
     </RelativeLayout>
 
     <TextView
@@ -48,6 +51,7 @@
         android:layout_width="350dp"
         android:layout_height="67dp"
         android:text="@string/welcome"
+        android:textColor="@color/darkerbutton"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="20sp"
@@ -56,5 +60,29 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintVertical_bias="0.793" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_select_change_disability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/button"
+        android:clickable="true"
+        android:contentDescription="Ajustes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="323dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715"
+        app:srcCompat="@drawable/crach" />
 </androidx.constraintlayout.widget.ConstraintLayout>

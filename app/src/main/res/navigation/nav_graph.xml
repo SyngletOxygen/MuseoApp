@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/menuPrincipalFragment"
-        android:name="com.eestn5.museoapp.MenuPrincipalFragment"
+        android:name="com.eestn5.museoapp.fragments.MenuPrincipalFragment"
         android:label="@string/MenuPrincipalFragment" >
         <action
             android:id="@+id/action_menuPrincipalFragment_to_seleccionDeDiscapacidadActivity"
@@ -17,14 +17,21 @@
     </fragment>
     <fragment
         android:id="@+id/seleccionDeDiscapacidadActivity"
-        android:name="com.eestn5.museoapp.SeleccionDeDiscapacidadActivity"
-        android:label="@string/SeleccionDeDiscapacidad" />
+        android:name="com.eestn5.museoapp.fragments.SeleccionDeDiscapacidadActivity"
+        android:label="@string/SeleccionDeDiscapacidad" >
+        <action
+            android:id="@+id/action_seleccionDeDiscapacidadActivity_to_menuPrincipalFragment"
+            app:destination="@id/menuPrincipalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/layoutPuntoFragment"
-        android:name="com.eestn5.museoapp.LayoutPuntoFragment"
-        android:label="LayoutPuntoFragment" >
+        android:name="com.eestn5.museoapp.fragments.LayoutPuntoFragment"
+        android:label="@string/SyngletOxygen.AKA.GHO" >
         <action
             android:id="@+id/action_layoutPuntoFragment_to_menuPrincipalFragment"
             app:destination="@id/menuPrincipalFragment" />
+        <action
+            android:id="@+id/action_layoutPuntoFragment_self"
+            app:destination="@id/layoutPuntoFragment" />
     </fragment>
 </navigation>

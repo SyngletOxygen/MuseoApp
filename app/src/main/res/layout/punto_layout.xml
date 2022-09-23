@@ -4,33 +4,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/historyOfPoint"
+        android:layout_width="297dp"
+        android:layout_height="177dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/back_button"
+        android:paddingLeft="16dp"
+        android:paddingTop="7dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="7dp"
+        android:text="El punto todavia esta cargando"
+        android:textAlignment="textStart"
+
+
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/DescriptionOfPoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
 
     <TextView
         android:id="@+id/NameOfPoint"
-        android:layout_width="116dp"
-        android:layout_height="78dp"
+        android:layout_width="237dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="36dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/DescriptionOfPoint"
+        android:textColor="@color/darkerbutton"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/historyOfPoint"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/DescriptionOfPoint"
-        android:layout_width="146dp"
-        android:layout_height="122dp"
-        android:layout_marginBottom="308dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="297dp"
+        android:layout_height="177dp"
+        android:layout_marginBottom="212dp"
+        android:background="@drawable/back_button"
+        android:paddingLeft="16dp"
+        android:paddingTop="7dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="7dp"
+        android:text="El punto todavia esta cargando"
+        android:textAlignment="textStart"
+        android:textColor="@color/darkerbutton"
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/button"
+        android:drawableTop="@android:drawable/ic_menu_send"
+        android:text="siguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionOfPoint" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
